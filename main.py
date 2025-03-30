@@ -70,35 +70,53 @@ def check_winner(board):
 def simulate_game():
     input_file, verbosity, simulations = sys.argv[1], sys.argv[2], int(sys.argv[3])
     algorithm, player, board = read_board(input_file)
-
+    continue_game = True
     red_to_move = (player == 'R')
 
-    if algorithm == "UR":
+    while(continue_game):
         
-        if simulations != 0:
-            print("Error: UR algorithm requires simulation count to be 0.")
-            sys.exit(1)
-        
-        move = uniform_random_move(board)
-        if move is None:
-            print("No valid moves left.")
-            return
+        if algorithm == "UR":
+            
+            if simulations != 0:
+                print("Error: UR algorithm requires simulation count to be 0.")
+                sys.exit(1)
+            
+            move = uniform_random_move(board)
+            if move is None:
+                print("No valid moves left.")
+                print("No winner")
+                continue_game = False
 
-        # Apply the move
-        for row in range(len(board) - 1, -1, -1):
-            if board[row][move] == 'O':
-                board[row][move] = 'R' if red_to_move else 'Y'
-                break
 
-        # Print selected move
-        print(f"FINAL Move selected: {move + 1}")
+            # Apply the move
+            for row in range(len(board) - 1, -1, -1):
+                if board[row][move] == 'O':
+                    board[row][move] = 'R' if red_to_move else 'Y'
+                    if red_to_move:
+                        red_to_move = False
+                    else:
+                        red_to_move = True
+                    break
+    
+            
+            for row in board:
+                print(" ".join(map(str, row)))
+
+            if check_winner(board) == 'Y':
+                print("Yellow is the winner")
+                continue_game = False
+            if check_winner(board) =='R':
+                print("Red is the winner")
+                continue_game = False
+
+            # Print selected move
+            print(f"FINAL Move selected: {move + 1}")
 
 def main():
     if len(sys.argv) != 4:
         print("Usage: python3 PA2.py <input_file> <verbosity> <simulations>")
         sys.exit(1)
-        
+    
     simulate_game()
-
 if __name__ == "__main__":
     main()
