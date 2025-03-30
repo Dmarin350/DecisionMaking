@@ -74,6 +74,11 @@ def simulate_game():
     red_to_move = (player == 'R')
 
     if algorithm == "UR":
+        
+        if simulations != 0:
+            print("Error: UR algorithm requires simulation count to be 0.")
+            sys.exit(1)
+        
         move = uniform_random_move(board)
         if move is None:
             print("No valid moves left.")
