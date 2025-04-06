@@ -391,6 +391,8 @@ def select_move(algorithm, board, player, simulations):
         return pmcgs_move(board, player, simulations, "None")
     elif algorithm == "UCT":
         return uct_move(board, player, simulations, "None")
+    elif algorithm == "UCT-IMPROVED":
+        return uct_improved_move(board, player, simulations, "None")
     else:
         raise ValueError(f"Unknown algorithm: {algorithm}")
 
@@ -421,6 +423,15 @@ def run_tournament():
         print()
 
 
+def uct_test():
+    win_50 = run_match(("UCT",50),("UCT-IMPROVED",50))
+    win_100 =run_match(("UCT",100),("UCT-IMPROVED",100))
+    win_500 = run_match(("UCT",500),("UCT-IMPROVED",500))
+
+    print(win_50)
+    print(win_100)
+    print(win_500)
+
 
 def main():
     if len(sys.argv) != 4:
@@ -431,3 +442,4 @@ def main():
 if __name__ == "__main__":
     main()
     #run_tournament()
+    # uct_test()
