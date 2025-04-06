@@ -5,10 +5,14 @@ import math
 import time
 import csv
 import os
+import itertools
+from collections import defaultdict
 
 # Course: CS 5314: Decision Making
 # Authors: Daniel Marin, Kevin Porras
 # Last Revised: Apr 5, 2025
+def clone_board(board):
+    return [row[:] for row in board]
 
 def read_board(file_name):
     with open(file_name, 'r') as f:
@@ -49,7 +53,7 @@ def pmcgs_move(board, player, simulations, verbosity):
         win_sum, num_sims = 0, 0
 
         for _ in range(simulations):
-            sim_board = copy.deepcopy(board)
+            sim_board = clone_board(board)
             for row in range(len(sim_board) - 1, -1, -1):
                 if sim_board[row][move] == 'O':
                     sim_board[row][move] = player
@@ -134,7 +138,7 @@ def uct_move(board, player, simulations, verbosity):
                 best_score = score
                 best_move = move
 
-        sim_board = copy.deepcopy(board)
+        sim_board = clone_board(board)
         for row in range(len(sim_board) - 1, -1, -1):
             if sim_board[row][best_move] == 'O':
                 sim_board[row][best_move] = player
@@ -188,7 +192,7 @@ def uct_improved_move(board, player, simulations, verbosity):
         if best_move is None:
             continue  # Skip this simulation if no move was selected
             
-        sim_board = copy.deepcopy(board)
+        sim_board = clone_board(board)
         for row in range(len(sim_board) - 1, -1, -1):
             if sim_board[row][best_move] == 'O':
                 sim_board[row][best_move] = player
@@ -319,6 +323,105 @@ def simulate_game():
     log(f"Winner: {winner_symbol or 'None'}")
     log_file.close()
 
+
+
+# Define the 5 strategies
+algorithms = [
+    ("UR", 0),
+    ("PMCGS", 500),
+    ("PMCGS", 1000),
+    ("UCT", 500),
+    ("UCT", 1000)
+]
+
+def run_match(algo1, algo2, num_games=100):
+    wins = {0: 0, 1: 0}  # algo1 wins, algo2 wins
+
+    for i in range(num_games):
+        # Alternate who goes first
+        if i % 2 == 0:
+            winner = play_full_game(algo1, algo2)
+            if winner == 'R':
+                wins[0] += 1
+            elif winner == 'Y':
+                wins[1] += 1
+        else:
+            winner = play_full_game(algo2, algo1)
+            if winner == 'R':
+                wins[1] += 1
+            elif winner == 'Y':
+                wins[0] += 1
+    return wins
+
+def play_full_game(algo1_tuple, algo2_tuple):
+    alg1, sim1 = algo1_tuple
+    alg2, sim2 = algo2_tuple
+    board = [['O'] * 7 for _ in range(6)]
+    current_player = 'R'
+    winner = None
+
+    while True:
+        if current_player == 'R':
+            move = select_move(alg1, board, current_player, sim1)
+        else:
+            move = select_move(alg2, board, current_player, sim2)
+
+        if move is None:
+            break  # draw
+
+        for row in range(5, -1, -1):
+            if board[row][move] == 'O':
+                board[row][move] = current_player
+                break
+
+        winner = check_winner(board)
+        if winner:
+            return winner
+
+        if not get_legal_moves(board):
+            break
+
+        current_player = switch_player(current_player)
+    return None  # draw
+
+def select_move(algorithm, board, player, simulations):
+    if algorithm == "UR":
+        return uniform_random_move(board)
+    elif algorithm == "PMCGS":
+        return pmcgs_move(board, player, simulations, "None")
+    elif algorithm == "UCT":
+        return uct_move(board, player, simulations, "None")
+    else:
+        raise ValueError(f"Unknown algorithm: {algorithm}")
+
+def run_tournament():
+    results = defaultdict(lambda: defaultdict(int))
+
+    for i, algo1 in enumerate(algorithms):
+        for j, algo2 in enumerate(algorithms):
+            if i <= j:
+                print(f"Running: {algo1} vs {algo2}")
+                wins = run_match(algo1, algo2)
+                results[algo1][algo2] = wins[0]
+                results[algo2][algo1] = wins[1]
+
+    print("\n--- TOURNAMENT RESULTS (Winning % for row vs column) ---")
+    headers = [f"{name}({sims})" for name, sims in algorithms]
+    print(f"{'':20}", end="")
+    for h in headers:
+        print(f"{h:>20}", end="")
+    print()
+    for a1 in algorithms:
+        row_name = f"{a1[0]}({a1[1]})"
+        print(f"{row_name:20}", end="")
+        for a2 in algorithms:
+            total = results[a1][a2] + results[a2][a1]
+            pct = (results[a1][a2] / total * 100) if total > 0 else 0
+            print(f"{pct:20.2f}", end="")
+        print()
+
+
+
 def main():
     if len(sys.argv) != 4:
         print("Usage: python3 main.py <input_file> <verbosity> <simulations>")
@@ -326,4 +429,5 @@ def main():
     simulate_game()
 
 if __name__ == "__main__":
-    main()
+    # main()
+    run_tournament()
