@@ -429,5 +429,5 @@ def main():
     simulate_game()
 
 if __name__ == "__main__":
-    # main()
-    run_tournament()
+    main()
+    #run_tournament()
