@@ -1,12 +1,16 @@
 import sys
 import random
+import copy
+import math
+import time
+import csv
+import os
 
-#Course: CS 5314: Decision Making
-#Authors: Daniel Marin, Kevin Porras
-#Last Revised: Mar 30, 2025
+# Course: CS 5314: Decision Making
+# Authors: Daniel Marin, Kevin Porras
+# Last Revised: Apr 5, 2025
 
 def read_board(file_name):
-    # Reads the txt file we are given
     with open(file_name, 'r') as f:
         algorithm = f.readline().strip()
         player = f.readline().strip()
@@ -14,109 +18,312 @@ def read_board(file_name):
     return algorithm, player, board
 
 def get_legal_moves(board):
-    # Checks to see if the top space at the top of a column has an empty space, making it a valid column
-    valid_columns = []
-    for col in range(7):
-        if board[0][col] == 'O':
-            valid_columns.append(col)
-    return valid_columns
+    return [col for col in range(7) if board[0][col] == 'O']
+
+def switch_player(player):
+    return 'Y' if player == 'R' else 'R'
 
 def uniform_random_move(board):
     legal_moves = get_legal_moves(board)
-    if legal_moves:
-        return random.choice(legal_moves)
-    else:
-        return None
+    return random.choice(legal_moves) if legal_moves else None
+
+def simulate_random_game(board, current_player):
+    while True:
+        winner = check_winner(board)
+        if winner:
+            return winner
+        if not get_legal_moves(board):
+            return None
+        move = uniform_random_move(board)
+        for row in range(len(board) - 1, -1, -1):
+            if board[row][move] == 'O':
+                board[row][move] = current_player
+                break
+        current_player = switch_player(current_player)
+
+def pmcgs_move(board, player, simulations, verbosity):
+    legal_moves = get_legal_moves(board)
+    move_stats = {}
+
+    for move in legal_moves:
+        win_sum, num_sims = 0, 0
+
+        for _ in range(simulations):
+            sim_board = copy.deepcopy(board)
+            for row in range(len(sim_board) - 1, -1, -1):
+                if sim_board[row][move] == 'O':
+                    sim_board[row][move] = player
+                    break
+
+            if verbosity == "Verbose":
+                print("NODE ADDED")
+
+            rollout_moves = []
+            current_player = switch_player(player)
+            while True:
+                winner = check_winner(sim_board)
+                if winner or not get_legal_moves(sim_board):
+                    break
+                rollout_move = uniform_random_move(sim_board)
+                rollout_moves.append(str(rollout_move + 1))
+                for row in range(len(sim_board) - 1, -1, -1):
+                    if sim_board[row][rollout_move] == 'O':
+                        sim_board[row][rollout_move] = current_player
+                        break
+                current_player = switch_player(current_player)
+
+            winner = check_winner(sim_board)
+            if winner == player:
+                result = 1
+            elif winner == switch_player(player):
+                result = -1
+            else:
+                result = 0
+
+            win_sum += result
+            num_sims += 1
+
+            if verbosity == "Verbose":
+                for m in rollout_moves:
+                    print(f"Move selected: {m}")
+                print(f"TERMINAL NODE VALUE: {result}")
+                print("Updated values:")
+                print(f"wi: {win_sum}")
+                print(f"ni: {num_sims}\n")
+
+        move_stats[move] = (win_sum, num_sims)
+
+        if verbosity == "Verbose":
+            print(f"wi: {win_sum}")
+            print(f"ni: {num_sims}")
+            print(f"Move simulated: {move + 1}\n")
+
+    best_move = max(move_stats, key=lambda m: move_stats[m][0] / move_stats[m][1])
+
+    if verbosity == "Verbose":
+        print("Column values:")
+        for m in range(7):
+            if m in move_stats:
+                avg = move_stats[m][0] / move_stats[m][1]
+                print(f"Column {m + 1}: {round(avg, 2)}")
+            else:
+                print(f"Column {m + 1}: Null")
+
+    return best_move
+
+def uct_move(board, player, simulations, verbosity):
+    legal_moves = get_legal_moves(board)
+    stats = {move: [0, 0] for move in legal_moves}
+    C = math.sqrt(2)
+
+    for _ in range(simulations):
+        total_simulations = sum(stats[move][1] for move in legal_moves) + 1
+        best_score = float('-inf')
+        best_move = None
+
+        for move in legal_moves:
+            wins, visits = stats[move]
+            if visits == 0:
+                score = float('inf')
+            else:
+                exploitation = wins / visits
+                exploration = C * math.sqrt(math.log(total_simulations) / visits)
+                score = exploitation + exploration
+
+            if score > best_score:
+                best_score = score
+                best_move = move
+
+        sim_board = copy.deepcopy(board)
+        for row in range(len(sim_board) - 1, -1, -1):
+            if sim_board[row][best_move] == 'O':
+                sim_board[row][best_move] = player
+                break
+
+        winner = simulate_random_game(sim_board, switch_player(player))
+        if winner == player:
+            result = 1
+        elif winner == switch_player(player):
+            result = -1
+        else:
+            result = 0
+
+        stats[best_move][0] += result
+        stats[best_move][1] += 1
+
+        if verbosity == "Verbose":
+            print("NODE ADDED")
+            print(f"TERMINAL NODE VALUE: {result}")
+            print("Updated values:")
+            print(f"wi: {stats[best_move][0]}")
+            print(f"ni: {stats[best_move][1]}\n")
+
+    return max(legal_moves, key=lambda m: stats[m][0] / stats[m][1])
+
+def uct_improved_move(board, player, simulations, verbosity):
+    legal_moves = get_legal_moves(board)
+    stats = {move: [0, 0] for move in legal_moves}
+
+    def center_bias(move):
+        return -abs(3 - move)
+
+    for _ in range(simulations):
+        total_simulations = sum(stats[move][1] for move in legal_moves) + 1
+        best_score = float('-inf')
+        best_move = None
+
+        for move in legal_moves:
+            wins, visits = stats[move]
+            if visits == 0:
+                score = float('inf')
+            else:
+                exploitation = wins / visits
+                exploration = math.sqrt(math.log(total_simulations) / visits)
+                score = exploitation + 1.4 * exploration + 0.01 * center_bias(move)
+
+            if score > best_score:
+                best_score = score
+                best_move = move
+                
+        if best_move is None:
+            continue  # Skip this simulation if no move was selected
+            
+        sim_board = copy.deepcopy(board)
+        for row in range(len(sim_board) - 1, -1, -1):
+            if sim_board[row][best_move] == 'O':
+                sim_board[row][best_move] = player
+                break
+
+        winner = simulate_random_game(sim_board, switch_player(player))
+        if winner == player:
+            result = 1
+        elif winner == switch_player(player):
+            result = -1
+        else:
+            result = 0
+
+        stats[best_move][0] += result
+        stats[best_move][1] += 1
+
+        if verbosity == "Verbose":
+            print("NODE ADDED")
+            print(f"TERMINAL NODE VALUE: {result}")
+            print("Updated values:")
+            print(f"wi: {stats[best_move][0]}")
+            print(f"ni: {stats[best_move][1]}")
+            
+            
+    valid_moves = {m: stats[m] for m in legal_moves if stats[m][1] > 0}
+    if not valid_moves:
+        return None  # No valid move found after simulations
     
+    return max(valid_moves, key=lambda m: valid_moves[m][0] / valid_moves[m][1])
+
+
+    return max(legal_moves, key=lambda m: stats[m][0] / stats[m][1])
+
 def check_winner(board):
-    rows = len(board)
-    cols = len(board[0])
-    
-    # Checks to see if a straight line has a winner
     def check_line(line):
         for i in range(len(line) - 3):
             if line[i] != 'O' and line[i] == line[i+1] == line[i+2] == line[i+3]:
                 return line[i]
         return None
-    
-    # Check horizontal
+
     for row in board:
         result = check_line(row)
-        if result:
-            return result
-        
-    # Check vertical
-    for c in range(cols):
-        column = [board[r][c] for r in range(rows)]
+        if result: return result
+
+    for c in range(7):
+        column = [board[r][c] for r in range(6)]
         result = check_line(column)
-        if result:
-            return result
-        
-    # Check diagonal (bottom-left to top-right)
-    for r in range(rows - 3):
-        for c in range(cols - 3):
+        if result: return result
+
+    for r in range(3):
+        for c in range(4):
             if board[r][c] != 'O' and board[r][c] == board[r+1][c+1] == board[r+2][c+2] == board[r+3][c+3]:
                 return board[r][c]
-            
-    # Check diagonal (top-left to bottom-right)
-    for r in range(3, rows):
-        for c in range(cols - 3):
+    for r in range(3, 6):
+        for c in range(4):
             if board[r][c] != 'O' and board[r][c] == board[r-1][c+1] == board[r-2][c+2] == board[r-3][c+3]:
                 return board[r][c]
 
     return None
 
-
 def simulate_game():
     input_file, verbosity, simulations = sys.argv[1], sys.argv[2], int(sys.argv[3])
     algorithm, player, board = read_board(input_file)
-    continue_game = True
-    red_to_move = (player == 'R')
+    current_player = player
+    winner_symbol = None
 
-    while(continue_game):
-        
+    log_file = open("game_output.log", "w")
+    def log(msg):
+        print(msg)
+        print(msg, file=log_file)
+
+    start_time = time.time()
+
+    # Create CSV file if it doesn't exist
+    if not os.path.exists("game_metrics.csv"):
+        with open("game_metrics.csv", "w", newline="") as csvfile:
+            writer = csv.writer(csvfile)
+            writer.writerow(["Algorithm", "Simulations", "Winner", "Duration (ms)"])
+
+    if algorithm == "UR" and simulations != 0:
+        print("UR must have 0 simulations.")
+        sys.exit(1)
+    if algorithm in ("PMCGS", "UCT", "UCT-IMPROVED") and simulations <= 0:
+        print(f"{algorithm} requires > 0 simulations.")
+        sys.exit(1)
+
+    while True:
         if algorithm == "UR":
-            
-            if simulations != 0:
-                print("Error: UR algorithm requires simulation count to be 0.")
-                sys.exit(1)
-            
             move = uniform_random_move(board)
-            if move is None:
-                print("No valid moves left.")
-                print("No winner")
-                continue_game = False
+        elif algorithm == "PMCGS":
+            move = pmcgs_move(board, current_player, simulations, verbosity)
+        elif algorithm == "UCT":
+            move = uct_move(board, current_player, simulations, verbosity)
+        elif algorithm == "UCT-IMPROVED":
+            move = uct_improved_move(board, current_player, simulations, verbosity)
+        else:
+            log("Unknown algorithm.")
+            break
 
+        if move is None:
+            log("No valid moves left.")
+            winner_symbol = 'None'
+            break
 
-            # Apply the move
-            for row in range(len(board) - 1, -1, -1):
-                if board[row][move] == 'O':
-                    board[row][move] = 'R' if red_to_move else 'Y'
-                    if red_to_move:
-                        red_to_move = False
-                    else:
-                        red_to_move = True
-                    break
-    
-            
-            for row in board:
-                print(" ".join(map(str, row)))
+        for row in range(5, -1, -1):
+            if board[row][move] == 'O':
+                board[row][move] = current_player
+                break
 
-            if check_winner(board) == 'Y':
-                print("Yellow is the winner")
-                continue_game = False
-            if check_winner(board) =='R':
-                print("Red is the winner")
-                continue_game = False
+        log(f"Turn: {'Red' if current_player == 'R' else 'Yellow'}")
+        for row in board:
+            log(" ".join(row))
+        log(f"FINAL Move selected: {move + 1}")
 
-            # Print selected move
-            print(f"FINAL Move selected: {move + 1}")
+        winner = check_winner(board)
+        if winner:
+            winner_symbol = winner
+            log(f"{'Red' if winner == 'R' else 'Yellow'} is the winner")
+            break
+
+        current_player = switch_player(current_player)
+
+    duration_ms = int((time.time() - start_time) * 1000)
+    with open("game_metrics.csv", "a", newline="") as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow([algorithm, simulations, winner_symbol or "None", duration_ms])
+    log(f"Game duration: {duration_ms} ms")
+    log(f"Winner: {winner_symbol or 'None'}")
+    log_file.close()
 
 def main():
     if len(sys.argv) != 4:
-        print("Usage: python3 PA2.py <input_file> <verbosity> <simulations>")
+        print("Usage: python3 main.py <input_file> <verbosity> <simulations>")
         sys.exit(1)
-    
     simulate_game()
+
 if __name__ == "__main__":
     main()
