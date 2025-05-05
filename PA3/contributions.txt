@@ -1,0 +1,7 @@
+Group Member Contributions:
+
+Daniel Marin:
+- Value Iteration Algorithm
+
+Kevin Porras:
+-Q Learning Algorithm
