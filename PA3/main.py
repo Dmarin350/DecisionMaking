@@ -1,5 +1,5 @@
 from collections import defaultdict
-
+import random
 
 states = [
     "RU_8p", "TU_10p", "RU_10p", "RD_10p","RD_8a","RU_8a",
@@ -124,6 +124,77 @@ print(f"  V(CLASS BEGINS) = {V['CLASS BEGINS']:.4f}")
 print("(States omitted from policy are terminal or have no actions)")
 for s, a in policy.items():
     print(f"  π({s}) = {a}")
+    
+    
 
+# Q-learning parameters
+Q = defaultdict(float)
+alpha = 0.1
+epsilon = 0.2
+episodes = 0
 
+lambda_s = 0.99  # reuse from earlier
 
+def is_terminal(state):
+    return state == "CLASS BEGINS"
+
+print("\n=== Starting Q-Learning ===")
+max_delta = float("inf")
+
+while max_delta > 0.001:
+    episodes += 1
+    s = "RU_8p"
+    max_delta = 0.0
+
+    while not is_terminal(s):
+        # Get valid actions with defined transitions
+        valid_actions = [a for a in actions[s] if (s, a) in P]
+        if not valid_actions:
+            print(f"No valid transitions from {s}, stopping episode.")
+            break
+
+        # Epsilon-greedy action selection
+        if random.random() < epsilon:
+            a = random.choice(valid_actions)
+        else:
+            q_vals = {a: Q[(s, a)] for a in valid_actions}
+            a = max(q_vals, key=q_vals.get)
+
+        # Sample transition from P
+        transitions = P[(s, a)]
+        prob, s_next, reward = random.choices(
+            transitions, weights=[t[0] for t in transitions]
+        )[0]
+
+        # Q-learning update
+        max_q_next = max((Q[(s_next, a2)] for a2 in actions[s_next] if (s_next, a2) in P), default=0.0)
+        q_old = Q[(s, a)]
+        q_new = q_old + alpha * (reward + lambda_s * max_q_next - q_old)
+        Q[(s, a)] = q_new
+        max_delta = max(max_delta, abs(q_new - q_old))
+
+        # Logging
+        print(f"Episode {episodes}, State {s}, Action {a}")
+        print(f"    Q_old = {q_old:.4f}, Reward = {reward}, Q_next_max = {max_q_next:.4f}")
+        print(f"    Q_new = {q_new:.4f}, ΔQ = {abs(q_new - q_old):.6f}")
+
+        s = s_next
+
+print(f"\nQ-Learning Converged after {episodes} episodes\n")
+
+# Derive final policy
+final_policy = {}
+for s in [s for s in states if s != "CLASS BEGINS"]:
+    valid_actions = [a for a in actions[s] if (s, a) in P]
+    if valid_actions:
+        best_a = max(valid_actions, key=lambda a: Q[(s, a)])
+        final_policy[s] = best_a
+
+# Print Q values and final policy
+print("Final Q-values:")
+for (s, a), q_val in Q.items():
+    print(f"  Q({s},{a}) = {q_val:.4f}")
+
+print("\nOptimal Policy from Q-learning:")
+for s, a in final_policy.items():
+    print(f"  π({s}) = {a}")
