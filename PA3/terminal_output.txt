@@ -1,0 +1,1037 @@
+State RU_8a: V_old = 0.0000
+    Q(P) = 2.0000
+    Q(R) = 0.0000
+    Q(S) = -1.0000
+    -> choose P, V_new = 2.0000
+State TU_10a: V_old = 0.0000
+    Q(any) = -1.0000
+    -> choose any, V_new = -1.0000
+State RU_10a: V_old = 0.0000
+    Q(any) = 0.0000
+    -> choose any, V_new = 0.0000
+State RD_10a: V_old = 0.0000
+    Q(any) = 4.0000
+    -> choose any, V_new = 4.0000
+State TD_10a: V_old = 0.0000
+    Q(any) = 3.0000
+    -> choose any, V_new = 3.0000
+
+=== Iteration 2 ===
+State RU_8p: V_old = 2.0000
+    Q(P) = 3.9800
+    Q(R) = 1.9800
+    Q(S) = 0.9800
+    -> choose P, V_new = 3.9800
+State TU_10p: V_old = 2.0000
+    Q(P) = 2.0000
+    Q(R) = 1.9800
+    -> choose P, V_new = 2.0000
+State RU_10p: V_old = 2.0000
+    Q(R) = 1.9800
+    Q(S) = 0.9800
+    Q(P) = 2.9900
+    -> choose P, V_new = 2.9900
+State RD_10p: V_old = 2.0000
+    Q(R) = 1.9800
+    Q(S) = 0.0000
+    Q(P) = 4.9700
+    -> choose P, V_new = 4.9700
+State RD_8a: V_old = 2.0000
+    Q(P) = 4.9700
+    Q(R) = 3.9600
+    -> choose P, V_new = 4.9700
+State RU_8a: V_old = 2.0000
+    Q(P) = 1.0100
+    Q(R) = 0.0000
+    Q(S) = 2.9600
+    -> choose S, V_new = 2.9600
+State TU_10a: V_old = -1.0000
+    Q(any) = -1.0000
+    -> choose any, V_new = -1.0000
+State RU_10a: V_old = 0.0000
+    Q(any) = 0.0000
+    -> choose any, V_new = 0.0000
+State RD_10a: V_old = 4.0000
+    Q(any) = 4.0000
+    -> choose any, V_new = 4.0000
+State TD_10a: V_old = 3.0000
+    Q(any) = 3.0000
+    -> choose any, V_new = 3.0000
+
+=== Iteration 3 ===
+State RU_8p: V_old = 3.9800
+    Q(P) = 3.9800
+    Q(R) = 2.9601
+    Q(S) = 3.9203
+    -> choose P, V_new = 3.9800
+State TU_10p: V_old = 2.0000
+    Q(P) = 2.0000
+    Q(R) = 2.9304
+    -> choose R, V_new = 2.9304
+State RU_10p: V_old = 2.9900
+    Q(R) = 2.9304
+    Q(S) = 3.9203
+    Q(P) = 3.4652
+    -> choose S, V_new = 3.9203
+State RD_10p: V_old = 4.9700
+    Q(R) = 4.9203
+    Q(S) = 0.0000
+    Q(P) = 6.4402
+    -> choose P, V_new = 6.4402
+State RD_8a: V_old = 4.9700
+    Q(P) = 4.9700
+    Q(R) = 3.9600
+    -> choose P, V_new = 4.9700
+State RU_8a: V_old = 2.9600
+    Q(P) = 1.0100
+    Q(R) = 0.0000
+    Q(S) = 2.9600
+    -> choose S, V_new = 2.9600
+State TU_10a: V_old = -1.0000
+    Q(any) = -1.0000
+    -> choose any, V_new = -1.0000
+State RU_10a: V_old = 0.0000
+    Q(any) = 0.0000
+    -> choose any, V_new = 0.0000
+State RD_10a: V_old = 4.0000
+    Q(any) = 4.0000
+    -> choose any, V_new = 4.0000
+State TD_10a: V_old = 3.0000
+    Q(any) = 3.0000
+    -> choose any, V_new = 3.0000
+
+=== Iteration 4 ===
+State RU_8p: V_old = 3.9800
+    Q(P) = 4.9011
+    Q(R) = 3.8811
+    Q(S) = 5.3757
+    -> choose S, V_new = 5.3757
+State TU_10p: V_old = 2.9304
+    Q(P) = 2.0000
+    Q(R) = 2.9304
+    -> choose R, V_new = 2.9304
+State RU_10p: V_old = 3.9203
+    Q(R) = 2.9304
+    Q(S) = 3.9203
+    Q(P) = 3.4652
+    -> choose S, V_new = 3.9203
+State RD_10p: V_old = 6.4402
+    Q(R) = 4.9203
+    Q(S) = 0.0000
+    Q(P) = 6.4402
+    -> choose P, V_new = 6.4402
+State RD_8a: V_old = 4.9700
+    Q(P) = 4.9700
+    Q(R) = 3.9600
+    -> choose P, V_new = 4.9700
+State RU_8a: V_old = 2.9600
+    Q(P) = 1.0100
+    Q(R) = 0.0000
+    Q(S) = 2.9600
+    -> choose S, V_new = 2.9600
+State TU_10a: V_old = -1.0000
+    Q(any) = -1.0000
+    -> choose any, V_new = -1.0000
+State RU_10a: V_old = 0.0000
+    Q(any) = 0.0000
+    -> choose any, V_new = 0.0000
+State RD_10a: V_old = 4.0000
+    Q(any) = 4.0000
+    -> choose any, V_new = 4.0000
+State TD_10a: V_old = 3.0000
+    Q(any) = 3.0000
+    -> choose any, V_new = 3.0000
+
+=== Iteration 5 ===
+State RU_8p: V_old = 5.3757
+    Q(P) = 4.9011
+    Q(R) = 3.8811
+    Q(S) = 5.3757
+    -> choose S, V_new = 5.3757
+State TU_10p: V_old = 2.9304
+    Q(P) = 2.0000
+    Q(R) = 2.9304
+    -> choose R, V_new = 2.9304
+State RU_10p: V_old = 3.9203
+    Q(R) = 2.9304
+    Q(S) = 3.9203
+    Q(P) = 3.4652
+    -> choose S, V_new = 3.9203
+State RD_10p: V_old = 6.4402
+    Q(R) = 4.9203
+    Q(S) = 0.0000
+    Q(P) = 6.4402
+    -> choose P, V_new = 6.4402
+State RD_8a: V_old = 4.9700
+    Q(P) = 4.9700
+    Q(R) = 3.9600
+    -> choose P, V_new = 4.9700
+State RU_8a: V_old = 2.9600
+    Q(P) = 1.0100
+    Q(R) = 0.0000
+    Q(S) = 2.9600
+    -> choose S, V_new = 2.9600
+State TU_10a: V_old = -1.0000
+    Q(any) = -1.0000
+    -> choose any, V_new = -1.0000
+State RU_10a: V_old = 0.0000
+    Q(any) = 0.0000
+    -> choose any, V_new = 0.0000
+State RD_10a: V_old = 4.0000
+    Q(any) = 4.0000
+    -> choose any, V_new = 4.0000
+State TD_10a: V_old = 3.0000
+    Q(any) = 3.0000
+    -> choose any, V_new = 3.0000
+
+Converged (Δ=0.000000 < 0.001)
+
+Total iterations: 5
+
+Final values V*(s):
+  V(RU_8p) = 5.3757
+  V(TU_10p) = 2.9304
+  V(RU_10p) = 3.9203
+  V(RD_10p) = 6.4402
+  V(RD_8a) = 4.9700
+  V(RU_8a) = 2.9600
+  V(TU_10a) = -1.0000
+  V(RU_10a) = 0.0000
+  V(RD_10a) = 4.0000
+  V(TD_10a) = 3.0000
+  V(CLASS BEGINS) = 0.0000
+(States omitted from policy are terminal or have no actions)
+  π(RU_8p) = S
+  π(TU_10p) = R
+  π(RU_10p) = S
+  π(RD_10p) = P
+  π(RD_8a) = P
+  π(RU_8a) = S
+  π(TU_10a) = any
+  π(RU_10a) = any
+  π(RD_10a) = any
+  π(TD_10a) = any
+
+=== Starting Q-Learning ===
+Episode 1, State RU_8p, Action P
+    Q_old = 0.0000, Reward = 2, Q_next_max = 0.0000
+    Q_new = 0.2000, ΔQ = 0.200000
+Episode 1, State TU_10p, Action P
+    Q_old = 0.0000, Reward = 2, Q_next_max = 0.0000
+    Q_new = 0.2000, ΔQ = 0.200000
+Episode 1, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 2, State RU_8p, Action P
+    Q_old = 0.2000, Reward = 2, Q_next_max = 0.2000
+    Q_new = 0.3998, ΔQ = 0.199800
+Episode 2, State TU_10p, Action P
+    Q_old = 0.2000, Reward = 2, Q_next_max = 0.0000
+    Q_new = 0.3800, ΔQ = 0.180000
+Episode 2, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 3, State RU_8p, Action P
+    Q_old = 0.3998, Reward = 2, Q_next_max = 0.3800
+    Q_new = 0.5974, ΔQ = 0.197640
+Episode 3, State TU_10p, Action P
+    Q_old = 0.3800, Reward = 2, Q_next_max = 0.0000
+    Q_new = 0.5420, ΔQ = 0.162000
+Episode 3, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 4, State RU_8p, Action P
+    Q_old = 0.5974, Reward = 2, Q_next_max = 0.5420
+    Q_new = 0.7914, ΔQ = 0.193914
+Episode 4, State TU_10p, Action P
+    Q_old = 0.5420, Reward = 2, Q_next_max = 0.0000
+    Q_new = 0.6878, ΔQ = 0.145800
+Episode 4, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 5, State RU_8p, Action S
+    Q_old = 0.0000, Reward = -1, Q_next_max = 0.0000
+    Q_new = -0.1000, ΔQ = 0.100000
+Episode 5, State RD_10p, Action R
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 5, State RD_8a, Action P
+    Q_old = 0.0000, Reward = 2, Q_next_max = 0.0000
+    Q_new = 0.2000, ΔQ = 0.200000
+Episode 5, State TD_10a, Action any
+    Q_old = 0.0000, Reward = 3, Q_next_max = 0.0000
+    Q_new = 0.3000, ΔQ = 0.300000
+Episode 6, State RU_8p, Action P
+    Q_old = 0.7914, Reward = 2, Q_next_max = 0.6878
+    Q_new = 0.9803, ΔQ = 0.188957
+Episode 6, State TU_10p, Action P
+    Q_old = 0.6878, Reward = 2, Q_next_max = 0.0000
+    Q_new = 0.8190, ΔQ = 0.131220
+Episode 6, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 7, State RU_8p, Action P
+    Q_old = 0.9803, Reward = 2, Q_next_max = 0.8190
+    Q_new = 1.1634, ΔQ = 0.183052
+Episode 7, State TU_10p, Action P
+    Q_old = 0.8190, Reward = 2, Q_next_max = 0.0000
+    Q_new = 0.9371, ΔQ = 0.118098
+Episode 7, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 8, State RU_8p, Action P
+    Q_old = 1.1634, Reward = 2, Q_next_max = 0.9371
+    Q_new = 1.3398, ΔQ = 0.176438
+Episode 8, State TU_10p, Action P
+    Q_old = 0.9371, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.0434, ΔQ = 0.106288
+Episode 8, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 9, State RU_8p, Action P
+    Q_old = 1.3398, Reward = 2, Q_next_max = 1.0434
+    Q_new = 1.5091, ΔQ = 0.169317
+Episode 9, State TU_10p, Action P
+    Q_old = 1.0434, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.1391, ΔQ = 0.095659
+Episode 9, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 10, State RU_8p, Action P
+    Q_old = 1.5091, Reward = 2, Q_next_max = 1.1391
+    Q_new = 1.6710, ΔQ = 0.161856
+Episode 10, State TU_10p, Action P
+    Q_old = 1.1391, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.2252, ΔQ = 0.086093
+Episode 10, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 11, State RU_8p, Action P
+    Q_old = 1.6710, Reward = 2, Q_next_max = 1.2252
+    Q_new = 1.8252, ΔQ = 0.154193
+Episode 11, State TU_10p, Action P
+    Q_old = 1.2252, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.3026, ΔQ = 0.077484
+Episode 11, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 12, State RU_8p, Action P
+    Q_old = 1.8252, Reward = 2, Q_next_max = 1.3026
+    Q_new = 1.9716, ΔQ = 0.146445
+Episode 12, State TU_10p, Action P
+    Q_old = 1.3026, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.3724, ΔQ = 0.069736
+Episode 12, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 13, State RU_8p, Action P
+    Q_old = 1.9716, Reward = 2, Q_next_max = 1.3724
+    Q_new = 2.1103, ΔQ = 0.138704
+Episode 13, State TU_10p, Action R
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 13, State RU_8a, Action P
+    Q_old = 0.0000, Reward = 2, Q_next_max = 0.0000
+    Q_new = 0.2000, ΔQ = 0.200000
+Episode 13, State TU_10a, Action any
+    Q_old = 0.0000, Reward = -1, Q_next_max = 0.0000
+    Q_new = -0.1000, ΔQ = 0.100000
+Episode 14, State RU_8p, Action P
+    Q_old = 2.1103, Reward = 2, Q_next_max = 1.3724
+    Q_new = 2.2352, ΔQ = 0.124834
+Episode 14, State TU_10p, Action P
+    Q_old = 1.3724, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.4351, ΔQ = 0.062762
+Episode 14, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 15, State RU_8p, Action P
+    Q_old = 2.2352, Reward = 2, Q_next_max = 1.4351
+    Q_new = 2.3537, ΔQ = 0.118564
+Episode 15, State TU_10p, Action P
+    Q_old = 1.4351, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.4916, ΔQ = 0.056486
+Episode 15, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 16, State RU_8p, Action P
+    Q_old = 2.3537, Reward = 2, Q_next_max = 1.4916
+    Q_new = 2.4660, ΔQ = 0.112300
+Episode 16, State TU_10p, Action P
+    Q_old = 1.4916, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.5425, ΔQ = 0.050837
+Episode 16, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 17, State RU_8p, Action P
+    Q_old = 2.4660, Reward = 2, Q_next_max = 1.5425
+    Q_new = 2.5721, ΔQ = 0.106103
+Episode 17, State TU_10p, Action R
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.2000
+    Q_new = 0.0198, ΔQ = 0.019800
+Episode 17, State RU_8a, Action P
+    Q_old = 0.2000, Reward = 2, Q_next_max = -0.1000
+    Q_new = 0.3701, ΔQ = 0.170100
+Episode 17, State TU_10a, Action any
+    Q_old = -0.1000, Reward = -1, Q_next_max = 0.0000
+    Q_new = -0.1900, ΔQ = 0.090000
+Episode 18, State RU_8p, Action P
+    Q_old = 2.5721, Reward = 2, Q_next_max = 1.5425
+    Q_new = 2.6676, ΔQ = 0.095492
+Episode 18, State TU_10p, Action P
+    Q_old = 1.5425, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.5882, ΔQ = 0.045754
+Episode 18, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 19, State RU_8p, Action P
+    Q_old = 2.6676, Reward = 2, Q_next_max = 1.5882
+    Q_new = 2.7581, ΔQ = 0.090473
+Episode 19, State TU_10p, Action P
+    Q_old = 1.5882, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.6294, ΔQ = 0.041178
+Episode 19, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 20, State RU_8p, Action P
+    Q_old = 2.7581, Reward = 2, Q_next_max = 1.6294
+    Q_new = 2.8436, ΔQ = 0.085502
+Episode 20, State TU_10p, Action P
+    Q_old = 1.6294, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.6665, ΔQ = 0.037060
+Episode 20, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 21, State RU_8p, Action P
+    Q_old = 2.8436, Reward = 2, Q_next_max = 1.6665
+    Q_new = 2.9242, ΔQ = 0.080621
+Episode 21, State TU_10p, Action P
+    Q_old = 1.6665, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.6998, ΔQ = 0.033354
+Episode 21, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 22, State RU_8p, Action S
+    Q_old = -0.1000, Reward = -1, Q_next_max = 0.0000
+    Q_new = -0.1900, ΔQ = 0.090000
+Episode 22, State RD_10p, Action R
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.2000
+    Q_new = 0.0198, ΔQ = 0.019800
+Episode 22, State RD_8a, Action P
+    Q_old = 0.2000, Reward = 2, Q_next_max = 0.3000
+    Q_new = 0.4097, ΔQ = 0.209700
+Episode 22, State TD_10a, Action any
+    Q_old = 0.3000, Reward = 3, Q_next_max = 0.0000
+    Q_new = 0.5700, ΔQ = 0.270000
+Episode 23, State RU_8p, Action P
+    Q_old = 2.9242, Reward = 2, Q_next_max = 1.6998
+    Q_new = 3.0001, ΔQ = 0.075861
+Episode 23, State TU_10p, Action P
+    Q_old = 1.6998, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.7298, ΔQ = 0.030019
+Episode 23, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 24, State RU_8p, Action P
+    Q_old = 3.0001, Reward = 2, Q_next_max = 1.7298
+    Q_new = 3.0713, ΔQ = 0.071247
+Episode 24, State TU_10p, Action P
+    Q_old = 1.7298, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.7568, ΔQ = 0.027017
+Episode 24, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 25, State RU_8p, Action P
+    Q_old = 3.0713, Reward = 2, Q_next_max = 1.7568
+    Q_new = 3.1381, ΔQ = 0.066797
+Episode 25, State TU_10p, Action P
+    Q_old = 1.7568, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.7812, ΔQ = 0.024315
+Episode 25, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 26, State RU_8p, Action P
+    Q_old = 3.1381, Reward = 2, Q_next_max = 1.7812
+    Q_new = 3.2006, ΔQ = 0.062524
+Episode 26, State TU_10p, Action P
+    Q_old = 1.7812, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.8030, ΔQ = 0.021884
+Episode 26, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 27, State RU_8p, Action S
+    Q_old = -0.1900, Reward = -1, Q_next_max = 0.0198
+    Q_new = -0.2690, ΔQ = 0.079040
+Episode 27, State RD_10p, Action R
+    Q_old = 0.0198, Reward = 0, Q_next_max = 0.4097
+    Q_new = 0.0584, ΔQ = 0.038580
+Episode 27, State RD_8a, Action P
+    Q_old = 0.4097, Reward = 2, Q_next_max = 0.5700
+    Q_new = 0.6252, ΔQ = 0.215460
+Episode 27, State TD_10a, Action any
+    Q_old = 0.5700, Reward = 3, Q_next_max = 0.0000
+    Q_new = 0.8130, ΔQ = 0.243000
+Episode 28, State RU_8p, Action P
+    Q_old = 3.2006, Reward = 2, Q_next_max = 1.8030
+    Q_new = 3.2591, ΔQ = 0.058438
+Episode 28, State TU_10p, Action P
+    Q_old = 1.8030, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.8227, ΔQ = 0.019695
+Episode 28, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 29, State RU_8p, Action P
+    Q_old = 3.2591, Reward = 2, Q_next_max = 1.8227
+    Q_new = 3.3136, ΔQ = 0.054544
+Episode 29, State TU_10p, Action P
+    Q_old = 1.8227, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.8405, ΔQ = 0.017726
+Episode 29, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 30, State RU_8p, Action P
+    Q_old = 3.3136, Reward = 2, Q_next_max = 1.8405
+    Q_new = 3.3645, ΔQ = 0.050845
+Episode 30, State TU_10p, Action P
+    Q_old = 1.8405, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.8564, ΔQ = 0.015953
+Episode 30, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 31, State RU_8p, Action P
+    Q_old = 3.3645, Reward = 2, Q_next_max = 1.8564
+    Q_new = 3.4118, ΔQ = 0.047340
+Episode 31, State TU_10p, Action R
+    Q_old = 0.0198, Reward = 0, Q_next_max = 0.3701
+    Q_new = 0.0545, ΔQ = 0.034660
+Episode 31, State RU_8a, Action P
+    Q_old = 0.3701, Reward = 2, Q_next_max = -0.1900
+    Q_new = 0.5143, ΔQ = 0.144180
+Episode 31, State TU_10a, Action any
+    Q_old = -0.1900, Reward = -1, Q_next_max = 0.0000
+    Q_new = -0.2710, ΔQ = 0.081000
+Episode 32, State RU_8p, Action P
+    Q_old = 3.4118, Reward = 2, Q_next_max = 1.8564
+    Q_new = 3.4544, ΔQ = 0.042606
+Episode 32, State TU_10p, Action P
+    Q_old = 1.8564, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.8708, ΔQ = 0.014358
+Episode 32, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 33, State RU_8p, Action P
+    Q_old = 3.4544, Reward = 2, Q_next_max = 1.8708
+    Q_new = 3.4942, ΔQ = 0.039767
+Episode 33, State TU_10p, Action P
+    Q_old = 1.8708, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.8837, ΔQ = 0.012922
+Episode 33, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 34, State RU_8p, Action P
+    Q_old = 3.4942, Reward = 2, Q_next_max = 1.8837
+    Q_new = 3.5312, ΔQ = 0.037069
+Episode 34, State TU_10p, Action P
+    Q_old = 1.8837, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.8953, ΔQ = 0.011630
+Episode 34, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 35, State RU_8p, Action P
+    Q_old = 3.5312, Reward = 2, Q_next_max = 1.8953
+    Q_new = 3.5658, ΔQ = 0.034514
+Episode 35, State TU_10p, Action P
+    Q_old = 1.8953, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9058, ΔQ = 0.010467
+Episode 35, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 36, State RU_8p, Action P
+    Q_old = 3.5658, Reward = 2, Q_next_max = 1.9058
+    Q_new = 3.5979, ΔQ = 0.032098
+Episode 36, State TU_10p, Action P
+    Q_old = 1.9058, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9152, ΔQ = 0.009420
+Episode 36, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 37, State RU_8p, Action P
+    Q_old = 3.5979, Reward = 2, Q_next_max = 1.9152
+    Q_new = 3.6277, ΔQ = 0.029821
+Episode 37, State TU_10p, Action P
+    Q_old = 1.9152, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9237, ΔQ = 0.008478
+Episode 37, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 38, State RU_8p, Action P
+    Q_old = 3.6277, Reward = 2, Q_next_max = 1.9237
+    Q_new = 3.6554, ΔQ = 0.027678
+Episode 38, State TU_10p, Action P
+    Q_old = 1.9237, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9313, ΔQ = 0.007630
+Episode 38, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 39, State RU_8p, Action P
+    Q_old = 3.6554, Reward = 2, Q_next_max = 1.9313
+    Q_new = 3.6810, ΔQ = 0.025666
+Episode 39, State TU_10p, Action P
+    Q_old = 1.9313, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9382, ΔQ = 0.006867
+Episode 39, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 40, State RU_8p, Action P
+    Q_old = 3.6810, Reward = 2, Q_next_max = 1.9382
+    Q_new = 3.7048, ΔQ = 0.023779
+Episode 40, State TU_10p, Action P
+    Q_old = 1.9382, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9444, ΔQ = 0.006181
+Episode 40, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 41, State RU_8p, Action P
+    Q_old = 3.7048, Reward = 2, Q_next_max = 1.9444
+    Q_new = 3.7268, ΔQ = 0.022013
+Episode 41, State TU_10p, Action P
+    Q_old = 1.9444, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9499, ΔQ = 0.005563
+Episode 41, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 42, State RU_8p, Action P
+    Q_old = 3.7268, Reward = 2, Q_next_max = 1.9499
+    Q_new = 3.7472, ΔQ = 0.020363
+Episode 42, State TU_10p, Action P
+    Q_old = 1.9499, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9549, ΔQ = 0.005006
+Episode 42, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 43, State RU_8p, Action P
+    Q_old = 3.7472, Reward = 2, Q_next_max = 1.9549
+    Q_new = 3.7660, ΔQ = 0.018822
+Episode 43, State TU_10p, Action P
+    Q_old = 1.9549, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9594, ΔQ = 0.004506
+Episode 43, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 44, State RU_8p, Action P
+    Q_old = 3.7660, Reward = 2, Q_next_max = 1.9594
+    Q_new = 3.7834, ΔQ = 0.017386
+Episode 44, State TU_10p, Action P
+    Q_old = 1.9594, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9635, ΔQ = 0.004055
+Episode 44, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 45, State RU_8p, Action P
+    Q_old = 3.7834, Reward = 2, Q_next_max = 1.9635
+    Q_new = 3.7994, ΔQ = 0.016049
+Episode 45, State TU_10p, Action P
+    Q_old = 1.9635, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9672, ΔQ = 0.003650
+Episode 45, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 46, State RU_8p, Action P
+    Q_old = 3.7994, Reward = 2, Q_next_max = 1.9672
+    Q_new = 3.8142, ΔQ = 0.014805
+Episode 46, State TU_10p, Action R
+    Q_old = 0.0545, Reward = 0, Q_next_max = 0.5143
+    Q_new = 0.0999, ΔQ = 0.045468
+Episode 46, State RU_8a, Action P
+    Q_old = 0.5143, Reward = 2, Q_next_max = -0.2710
+    Q_new = 0.6360, ΔQ = 0.121743
+Episode 46, State TU_10a, Action any
+    Q_old = -0.2710, Reward = -1, Q_next_max = 0.0000
+    Q_new = -0.3439, ΔQ = 0.072900
+Episode 47, State RU_8p, Action P
+    Q_old = 3.8142, Reward = 2, Q_next_max = 1.9672
+    Q_new = 3.8276, ΔQ = 0.013325
+Episode 47, State TU_10p, Action P
+    Q_old = 1.9672, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9704, ΔQ = 0.003285
+Episode 47, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 48, State RU_8p, Action P
+    Q_old = 3.8276, Reward = 2, Q_next_max = 1.9704
+    Q_new = 3.8399, ΔQ = 0.012317
+Episode 48, State TU_10p, Action R
+    Q_old = 0.0999, Reward = 0, Q_next_max = 0.6360
+    Q_new = 0.1529, ΔQ = 0.052974
+Episode 48, State RU_8a, Action P
+    Q_old = 0.6360, Reward = 2, Q_next_max = -0.3439
+    Q_new = 0.7384, ΔQ = 0.102352
+Episode 48, State TU_10a, Action any
+    Q_old = -0.3439, Reward = -1, Q_next_max = 0.0000
+    Q_new = -0.4095, ΔQ = 0.065610
+Episode 49, State RU_8p, Action S
+    Q_old = -0.2690, Reward = -1, Q_next_max = 0.0584
+    Q_new = -0.3364, ΔQ = 0.067316
+Episode 49, State RD_10p, Action R
+    Q_old = 0.0584, Reward = 0, Q_next_max = 0.6252
+    Q_new = 0.1144, ΔQ = 0.056053
+Episode 49, State RD_8a, Action P
+    Q_old = 0.6252, Reward = 2, Q_next_max = 0.8130
+    Q_new = 0.8431, ΔQ = 0.217971
+Episode 49, State TD_10a, Action any
+    Q_old = 0.8130, Reward = 3, Q_next_max = 0.0000
+    Q_new = 1.0317, ΔQ = 0.218700
+Episode 50, State RU_8p, Action P
+    Q_old = 3.8399, Reward = 2, Q_next_max = 1.9704
+    Q_new = 3.8510, ΔQ = 0.011086
+Episode 50, State TU_10p, Action P
+    Q_old = 1.9704, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9734, ΔQ = 0.002956
+Episode 50, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 51, State RU_8p, Action P
+    Q_old = 3.8510, Reward = 2, Q_next_max = 1.9734
+    Q_new = 3.8612, ΔQ = 0.010270
+Episode 51, State TU_10p, Action P
+    Q_old = 1.9734, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9761, ΔQ = 0.002661
+Episode 51, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 52, State RU_8p, Action P
+    Q_old = 3.8612, Reward = 2, Q_next_max = 1.9761
+    Q_new = 3.8707, ΔQ = 0.009506
+Episode 52, State TU_10p, Action P
+    Q_old = 1.9761, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9784, ΔQ = 0.002395
+Episode 52, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 53, State RU_8p, Action P
+    Q_old = 3.8707, Reward = 2, Q_next_max = 1.9784
+    Q_new = 3.8795, ΔQ = 0.008793
+Episode 53, State TU_10p, Action P
+    Q_old = 1.9784, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9806, ΔQ = 0.002155
+Episode 53, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 54, State RU_8p, Action P
+    Q_old = 3.8795, Reward = 2, Q_next_max = 1.9806
+    Q_new = 3.8877, ΔQ = 0.008127
+Episode 54, State TU_10p, Action P
+    Q_old = 1.9806, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9825, ΔQ = 0.001940
+Episode 54, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 55, State RU_8p, Action P
+    Q_old = 3.8877, Reward = 2, Q_next_max = 1.9825
+    Q_new = 3.8952, ΔQ = 0.007506
+Episode 55, State TU_10p, Action P
+    Q_old = 1.9825, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9843, ΔQ = 0.001746
+Episode 55, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 56, State RU_8p, Action P
+    Q_old = 3.8952, Reward = 2, Q_next_max = 1.9843
+    Q_new = 3.9021, ΔQ = 0.006928
+Episode 56, State TU_10p, Action P
+    Q_old = 1.9843, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9859, ΔQ = 0.001571
+Episode 56, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 57, State RU_8p, Action S
+    Q_old = -0.3364, Reward = -1, Q_next_max = 0.1144
+    Q_new = -0.3914, ΔQ = 0.055036
+Episode 57, State RD_10p, Action R
+    Q_old = 0.1144, Reward = 0, Q_next_max = 0.8431
+    Q_new = 0.1865, ΔQ = 0.072027
+Episode 57, State RD_8a, Action P
+    Q_old = 0.8431, Reward = 2, Q_next_max = 1.0317
+    Q_new = 1.0610, ΔQ = 0.217825
+Episode 57, State TD_10a, Action any
+    Q_old = 1.0317, Reward = 3, Q_next_max = 0.0000
+    Q_new = 1.2285, ΔQ = 0.196830
+Episode 58, State RU_8p, Action P
+    Q_old = 3.9021, Reward = 2, Q_next_max = 1.9859
+    Q_new = 3.9085, ΔQ = 0.006391
+Episode 58, State TU_10p, Action P
+    Q_old = 1.9859, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9873, ΔQ = 0.001414
+Episode 58, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 59, State RU_8p, Action R
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 59, State RU_10p, Action R
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.7384
+    Q_new = 0.0731, ΔQ = 0.073099
+Episode 59, State RU_8a, Action S
+    Q_old = 0.0000, Reward = -1, Q_next_max = 0.0000
+    Q_new = -0.1000, ΔQ = 0.100000
+Episode 59, State RD_10a, Action any
+    Q_old = 0.0000, Reward = 4, Q_next_max = 0.0000
+    Q_new = 0.4000, ΔQ = 0.400000
+Episode 60, State RU_8p, Action P
+    Q_old = 3.9085, Reward = 2, Q_next_max = 1.9873
+    Q_new = 3.9144, ΔQ = 0.005892
+Episode 60, State TU_10p, Action P
+    Q_old = 1.9873, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9885, ΔQ = 0.001273
+Episode 60, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 61, State RU_8p, Action P
+    Q_old = 3.9144, Reward = 2, Q_next_max = 1.9885
+    Q_new = 3.9198, ΔQ = 0.005429
+Episode 61, State TU_10p, Action P
+    Q_old = 1.9885, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9897, ΔQ = 0.001145
+Episode 61, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 62, State RU_8p, Action P
+    Q_old = 3.9198, Reward = 2, Q_next_max = 1.9897
+    Q_new = 3.9248, ΔQ = 0.004999
+Episode 62, State TU_10p, Action P
+    Q_old = 1.9897, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9907, ΔQ = 0.001031
+Episode 62, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 63, State RU_8p, Action P
+    Q_old = 3.9248, Reward = 2, Q_next_max = 1.9907
+    Q_new = 3.9294, ΔQ = 0.004601
+Episode 63, State TU_10p, Action R
+    Q_old = 0.1529, Reward = 0, Q_next_max = 0.7384
+    Q_new = 0.2107, ΔQ = 0.057809
+Episode 63, State RU_8a, Action P
+    Q_old = 0.7384, Reward = 2, Q_next_max = -0.4095
+    Q_new = 0.8240, ΔQ = 0.085621
+Episode 63, State TU_10a, Action any
+    Q_old = -0.4095, Reward = -1, Q_next_max = 0.0000
+    Q_new = -0.4686, ΔQ = 0.059049
+Episode 64, State RU_8p, Action P
+    Q_old = 3.9294, Reward = 2, Q_next_max = 1.9907
+    Q_new = 3.9335, ΔQ = 0.004141
+Episode 64, State TU_10p, Action R
+    Q_old = 0.2107, Reward = 0, Q_next_max = 0.8240
+    Q_new = 0.2712, ΔQ = 0.060505
+Episode 64, State RU_8a, Action P
+    Q_old = 0.8240, Reward = 2, Q_next_max = -0.4686
+    Q_new = 0.8952, ΔQ = 0.071213
+Episode 64, State TU_10a, Action any
+    Q_old = -0.4686, Reward = -1, Q_next_max = 0.0000
+    Q_new = -0.5217, ΔQ = 0.053144
+Episode 65, State RU_8p, Action P
+    Q_old = 3.9335, Reward = 2, Q_next_max = 1.9907
+    Q_new = 3.9373, ΔQ = 0.003727
+Episode 65, State TU_10p, Action P
+    Q_old = 1.9907, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9917, ΔQ = 0.000928
+Episode 65, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 66, State RU_8p, Action P
+    Q_old = 3.9373, Reward = 2, Q_next_max = 1.9917
+    Q_new = 3.9407, ΔQ = 0.003446
+Episode 66, State TU_10p, Action P
+    Q_old = 1.9917, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9925, ΔQ = 0.000835
+Episode 66, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 67, State RU_8p, Action P
+    Q_old = 3.9407, Reward = 2, Q_next_max = 1.9925
+    Q_new = 3.9439, ΔQ = 0.003184
+Episode 67, State TU_10p, Action P
+    Q_old = 1.9925, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9932, ΔQ = 0.000751
+Episode 67, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 68, State RU_8p, Action P
+    Q_old = 3.9439, Reward = 2, Q_next_max = 1.9932
+    Q_new = 3.9468, ΔQ = 0.002940
+Episode 68, State TU_10p, Action P
+    Q_old = 1.9932, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9939, ΔQ = 0.000676
+Episode 68, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 69, State RU_8p, Action P
+    Q_old = 3.9468, Reward = 2, Q_next_max = 1.9939
+    Q_new = 3.9496, ΔQ = 0.002713
+Episode 69, State TU_10p, Action P
+    Q_old = 1.9939, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9945, ΔQ = 0.000609
+Episode 69, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 70, State RU_8p, Action P
+    Q_old = 3.9496, Reward = 2, Q_next_max = 1.9945
+    Q_new = 3.9521, ΔQ = 0.002502
+Episode 70, State TU_10p, Action P
+    Q_old = 1.9945, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9951, ΔQ = 0.000548
+Episode 70, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 71, State RU_8p, Action P
+    Q_old = 3.9521, Reward = 2, Q_next_max = 1.9951
+    Q_new = 3.9544, ΔQ = 0.002306
+Episode 71, State TU_10p, Action P
+    Q_old = 1.9951, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9956, ΔQ = 0.000493
+Episode 71, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 72, State RU_8p, Action P
+    Q_old = 3.9544, Reward = 2, Q_next_max = 1.9956
+    Q_new = 3.9565, ΔQ = 0.002124
+Episode 72, State TU_10p, Action R
+    Q_old = 0.2712, Reward = 0, Q_next_max = 0.8952
+    Q_new = 0.3327, ΔQ = 0.061504
+Episode 72, State RU_8a, Action P
+    Q_old = 0.8952, Reward = 2, Q_next_max = -0.5217
+    Q_new = 0.9540, ΔQ = 0.058831
+Episode 72, State TU_10a, Action any
+    Q_old = -0.5217, Reward = -1, Q_next_max = 0.0000
+    Q_new = -0.5695, ΔQ = 0.047830
+Episode 73, State RU_8p, Action P
+    Q_old = 3.9565, Reward = 2, Q_next_max = 1.9956
+    Q_new = 3.9584, ΔQ = 0.001912
+Episode 73, State TU_10p, Action P
+    Q_old = 1.9956, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9960, ΔQ = 0.000444
+Episode 73, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 74, State RU_8p, Action P
+    Q_old = 3.9584, Reward = 2, Q_next_max = 1.9960
+    Q_new = 3.9602, ΔQ = 0.001765
+Episode 74, State TU_10p, Action P
+    Q_old = 1.9960, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9964, ΔQ = 0.000399
+Episode 74, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 75, State RU_8p, Action P
+    Q_old = 3.9602, Reward = 2, Q_next_max = 1.9964
+    Q_new = 3.9618, ΔQ = 0.001628
+Episode 75, State TU_10p, Action R
+    Q_old = 0.3327, Reward = 0, Q_next_max = 0.9540
+    Q_new = 0.3939, ΔQ = 0.061178
+Episode 75, State RU_8a, Action P
+    Q_old = 0.9540, Reward = 2, Q_next_max = -0.5695
+    Q_new = 1.0023, ΔQ = 0.048212
+Episode 75, State TU_10a, Action any
+    Q_old = -0.5695, Reward = -1, Q_next_max = 0.0000
+    Q_new = -0.6126, ΔQ = 0.043047
+Episode 76, State RU_8p, Action P
+    Q_old = 3.9618, Reward = 2, Q_next_max = 1.9964
+    Q_new = 3.9633, ΔQ = 0.001465
+Episode 76, State TU_10p, Action P
+    Q_old = 1.9964, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9968, ΔQ = 0.000359
+Episode 76, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 77, State RU_8p, Action P
+    Q_old = 3.9633, Reward = 2, Q_next_max = 1.9968
+    Q_new = 3.9646, ΔQ = 0.001354
+Episode 77, State TU_10p, Action P
+    Q_old = 1.9968, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9971, ΔQ = 0.000323
+Episode 77, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 78, State RU_8p, Action P
+    Q_old = 3.9646, Reward = 2, Q_next_max = 1.9971
+    Q_new = 3.9659, ΔQ = 0.001251
+Episode 78, State TU_10p, Action P
+    Q_old = 1.9971, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9974, ΔQ = 0.000291
+Episode 78, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 79, State RU_8p, Action P
+    Q_old = 3.9659, Reward = 2, Q_next_max = 1.9974
+    Q_new = 3.9670, ΔQ = 0.001154
+Episode 79, State TU_10p, Action P
+    Q_old = 1.9974, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9976, ΔQ = 0.000262
+Episode 79, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 80, State RU_8p, Action P
+    Q_old = 3.9670, Reward = 2, Q_next_max = 1.9976
+    Q_new = 3.9681, ΔQ = 0.001065
+Episode 80, State TU_10p, Action P
+    Q_old = 1.9976, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9979, ΔQ = 0.000236
+Episode 80, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+Episode 81, State RU_8p, Action R
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0731
+    Q_new = 0.0072, ΔQ = 0.007237
+Episode 81, State RU_10p, Action R
+    Q_old = 0.0731, Reward = 0, Q_next_max = 1.0023
+    Q_new = 0.1650, ΔQ = 0.091913
+Episode 81, State RU_8a, Action P
+    Q_old = 1.0023, Reward = 2, Q_next_max = -0.6126
+    Q_new = 1.0414, ΔQ = 0.039129
+Episode 81, State TU_10a, Action any
+    Q_old = -0.6126, Reward = -1, Q_next_max = 0.0000
+    Q_new = -0.6513, ΔQ = 0.038742
+Episode 82, State RU_8p, Action P
+    Q_old = 3.9681, Reward = 2, Q_next_max = 1.9979
+    Q_new = 3.9691, ΔQ = 0.000982
+Episode 82, State TU_10p, Action P
+    Q_old = 1.9979, Reward = 2, Q_next_max = 0.0000
+    Q_new = 1.9981, ΔQ = 0.000212
+Episode 82, State RU_10a, Action any
+    Q_old = 0.0000, Reward = 0, Q_next_max = 0.0000
+    Q_new = 0.0000, ΔQ = 0.000000
+
+Q-Learning Converged after 82 episodes
+
+Final Q-values:
+  Q(RU_8p,P) = 3.9691
+  Q(RU_8p,R) = 0.0072
+  Q(RU_8p,S) = -0.3914
+  Q(TU_10p,P) = 1.9981
+  Q(TU_10p,R) = 0.3939
+  Q(RU_10a,any) = 0.0000
+  Q(RD_10p,R) = 0.1865
+  Q(RD_10p,S) = 0.0000
+  Q(RD_10p,P) = 0.0000
+  Q(RD_8a,P) = 1.0610
+  Q(RD_8a,R) = 0.0000
+  Q(TD_10a,any) = 1.2285
+  Q(RU_8a,P) = 1.0414
+  Q(RU_8a,R) = 0.0000
+  Q(RU_8a,S) = -0.1000
+  Q(TU_10a,any) = -0.6513
+  Q(RU_10p,R) = 0.1650
+  Q(RU_10p,S) = 0.0000
+  Q(RU_10p,P) = 0.0000
+  Q(RD_10a,any) = 0.4000
+
+Optimal Policy from Q-learning:
+  π(RU_8p) = P
+  π(TU_10p) = P
+  π(RU_10p) = R
+  π(RD_10p) = R
+  π(RD_8a) = P
+  π(RU_8a) = P
+  π(TU_10a) = any
+  π(RU_10a) = any
+  π(RD_10a) = any
+  π(TD_10a) = any
